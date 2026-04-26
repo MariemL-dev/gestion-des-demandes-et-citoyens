@@ -2,22 +2,16 @@ import { Request, Response } from "express";
 import prisma from "../lib/prisma";
 
 // CREATE Citizen
-
 export const createCitizen = async (req: Request, res: Response) => {
   try {
     const { nom, prenom, email } = req.body;
 
-    // Validation
     if (!nom || !prenom || !email) {
       return res.status(400).json({ error: "All fields are required" });
     }
 
     const citizen = await prisma.citizen.create({
-      data: {
-        nom,
-        prenom,
-        email,
-      },
+      data: { nom, prenom, email },
     });
 
     return res.status(201).json(citizen);
@@ -30,9 +24,7 @@ export const createCitizen = async (req: Request, res: Response) => {
   }
 };
 
-
 // GET ALL Citizens
-
 export const getCitizens = async (req: Request, res: Response) => {
   try {
     const citizens = await prisma.citizen.findMany({
@@ -43,13 +35,12 @@ export const getCitizens = async (req: Request, res: Response) => {
 
     return res.json(citizens);
   } catch (error) {
+    console.error("GET CITIZENS ERROR:", error);
     return res.status(500).json({ error: "Error fetching citizens" });
   }
 };
 
-
 // GET ONE Citizen
-
 export const getCitizen = async (req: Request, res: Response) => {
   try {
     const id = Number(req.params.id);
@@ -76,7 +67,6 @@ export const getCitizen = async (req: Request, res: Response) => {
 };
 
 // UPDATE Citizen
-
 export const updateCitizen = async (req: Request, res: Response) => {
   try {
     const id = Number(req.params.id);
@@ -92,11 +82,7 @@ export const updateCitizen = async (req: Request, res: Response) => {
 
     const citizen = await prisma.citizen.update({
       where: { id },
-      data: {
-        nom,
-        prenom,
-        email,
-      },
+      data: { nom, prenom, email },
     });
 
     return res.json(citizen);
@@ -108,6 +94,7 @@ export const updateCitizen = async (req: Request, res: Response) => {
     return res.status(500).json({ error: "Error updating citizen" });
   }
 };
+
 // DELETE Citizen
 export const deleteCitizen = async (req: Request, res: Response) => {
   try {

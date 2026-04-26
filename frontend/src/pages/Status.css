@@ -1,0 +1,238 @@
+.status-page {
+  padding: 32px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.status-header h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -1px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  min-width: 260px;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #dbe3f1;
+  background: #ffffff;
+  font-size: 15px;
+  outline: none;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.06);
+}
+
+.primary-btn,
+.secondary-btn,
+.edit-btn,
+.delete-btn {
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-weight: 700;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  padding: 14px 18px;
+  border-radius: 14px;
+}
+
+.secondary-btn {
+  background: #eef2f7;
+  color: #334155;
+  padding: 12px 16px;
+  border-radius: 12px;
+}
+
+.edit-btn {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  min-width: 74px;
+}
+
+.delete-btn {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  min-width: 74px;
+}
+
+.table-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 24px;
+  padding: 24px;
+  border: 1px solid rgba(219, 231, 245, 0.9);
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+.status-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 14px;
+  table-layout: fixed;
+}
+
+.status-table th {
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 18px 12px 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  text-align: left;
+}
+
+.status-table th:nth-child(1),
+.status-table td:nth-child(1) {
+  width: 45%;
+}
+
+.status-table th:nth-child(2),
+.status-table td:nth-child(2) {
+  width: 20%;
+}
+
+.status-table th:nth-child(3),
+.status-table td:nth-child(3) {
+  width: 35%;
+}
+
+.status-table tbody tr {
+  background: white;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.04);
+}
+
+.status-table tbody td {
+  padding: 18px;
+  color: #0f172a;
+  font-size: 15px;
+}
+
+.status-table tbody td:first-child {
+  border-radius: 16px 0 0 16px;
+}
+
+.status-table tbody td:last-child {
+  border-radius: 0 16px 16px 0;
+}
+
+.status-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+}
+
+.status-icon {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #60a5fa);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.actions-cell {
+  width: 180px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.empty-row {
+  text-align: center;
+  padding: 26px !important;
+  color: #94a3b8 !important;
+  background: #f8fafc !important;
+  border-radius: 16px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+  flex-wrap: wrap;
+}
+
+.pagination span {
+  color: #334155;
+  font-weight: 700;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-box {
+  width: 440px;
+  max-width: 92%;
+  background: white;
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 30px 60px rgba(15, 23, 42, 0.2);
+}
+
+.modal-box h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #0f172a;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.modal-box input {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 14px 16px;
+  border: 1px solid #dbe3f1;
+  border-radius: 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
