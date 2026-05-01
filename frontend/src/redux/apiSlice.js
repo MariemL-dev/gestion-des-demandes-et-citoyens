@@ -128,19 +128,17 @@ export const apiSlice = createApi({
 });
 
 export const {
-  // Citizens
+
   useGetCitizensQuery,
   useAddCitizenMutation,
   useUpdateCitizenMutation,
   useDeleteCitizenMutation,
 
-  // Demandes
   useGetDemandesQuery,
   useAddDemandeMutation,
   useUpdateDemandeMutation,
   useDeleteDemandeMutation,
 
-  // Status
   useGetStatusesQuery,
   useAddStatusMutation,
   useUpdateStatusMutation,

@@ -9,30 +9,25 @@
     ),
     linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
 }
-
 .analytics-header {
   margin-bottom: 24px;
 }
-
 .analytics-header h1 {
   margin: 0;
   font-size: 42px;
   font-weight: 950;
   color: #0f172a;
 }
-
 .analytics-header p {
   margin-top: 8px;
   color: #64748b;
 }
-
 .analytics-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 18px;
   margin-bottom: 24px;
 }
-
 .analytics-card {
   border-radius: 26px;
   padding: 24px;
@@ -42,7 +37,6 @@
   position: relative;
   overflow: hidden;
 }
-
 .analytics-card::after {
   content: "";
   position: absolute;
@@ -53,18 +47,15 @@
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.14);
 }
-
 .analytics-card span {
   font-size: 14px;
   opacity: 0.95;
 }
-
 .analytics-card h2 {
   margin: 16px 0 0;
   font-size: 42px;
   font-weight: 950;
 }
-
 .blue {
   background: linear-gradient(135deg, #2563eb, #60a5fa);
 }
@@ -77,14 +68,12 @@
 .orange {
   background: linear-gradient(135deg, #ea580c, #f59e0b);
 }
-
 .analytics-grid {
   display: grid;
   grid-template-columns: 1.45fr 1fr;
   gap: 22px;
   margin-bottom: 24px;
 }
-
 .analytics-panel {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 26px;
@@ -92,44 +81,37 @@
   border: 1px solid #e2e8f0;
   box-shadow: 0 20px 45px rgba(15, 23, 42, 0.07);
 }
-
 .analytics-panel h3 {
   margin: 0 0 20px;
   font-size: 24px;
   font-weight: 950;
   color: #0f172a;
 }
-
 .bar-chart {
   display: flex;
   flex-direction: column;
   gap: 18px;
 }
-
 .bar-row {
   display: grid;
   grid-template-columns: 120px 1fr 40px;
   align-items: center;
   gap: 14px;
 }
-
 .bar-row span {
   color: #475569;
   font-weight: 700;
 }
-
 .bar-track {
   height: 14px;
   background: #eef2f7;
   border-radius: 999px;
   overflow: hidden;
 }
-
 .bar {
   height: 100%;
   border-radius: 999px;
 }
-
 .pending {
   background: #f59e0b;
 }
@@ -139,7 +121,6 @@
 .rejected {
   background: #ef4444;
 }
-
 .summary-line {
   display: flex;
   justify-content: space-between;
@@ -150,25 +131,20 @@
   margin-bottom: 14px;
   border: 1px solid #eef2f7;
 }
-
 .summary-line span {
   color: #64748b;
 }
-
 .summary-line strong {
   color: #0f172a;
 }
-
 .success {
   color: #10b981 !important;
 }
-
 .status-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 16px;
 }
-
 .status-mini-card {
   background: #f8fafc;
   padding: 18px;
@@ -178,36 +154,80 @@
   align-items: center;
   border: 1px solid #eef2f7;
 }
-
 .status-mini-card span {
   color: #475569;
   font-weight: 700;
 }
-
 .status-mini-card strong {
   color: #2563eb;
   font-size: 24px;
   font-weight: 950;
-}
-
-/* DARK MODE */
+} /* DARK MODE */
 .dark-mode .analytics-page {
   background: #0f172a !important;
 }
-
 .dark-mode .analytics-panel,
 .dark-mode .summary-line,
 .dark-mode .status-mini-card {
   background: #111827 !important;
   border-color: #1f2937 !important;
 }
-
 .dark-mode .bar-track {
   background: #1e293b !important;
 }
-
 @media (max-width: 900px) {
   .analytics-grid {
     grid-template-columns: 1fr;
   }
+} /* ===== ANALYTICS UI REACTION ===== */ /* Cards */
+.stat-card {
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+.stat-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(37, 99, 235, 0.1);
+} /* Dark */
+.dark-mode .stat-card:hover {
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(59, 130, 246, 0.2);
+} /* Titles */
+.stat-card h3 {
+  transition: 0.2s;
+}
+.stat-card:hover h3 {
+  transform: translateX(4px);
+} /* Icons */
+.stat-card .icon {
+  transition: 0.3s ease;
+}
+.stat-card:hover .icon {
+  transform: scale(1.1) rotate(5deg);
+}
+/* ===== ONLY REACTION - KEEP SAME DESIGN ===== */
+.analytics-card,
+.analytics-panel,
+.summary-line,
+.status-mini-card {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.analytics-card:hover,
+.analytics-panel:hover,
+.summary-line:hover,
+.status-mini-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.12);
+}
+
+.dark-mode .analytics-card:hover,
+.dark-mode .analytics-panel:hover,
+.dark-mode .summary-line:hover,
+.dark-mode .status-mini-card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.45);
 }

@@ -236,9 +236,8 @@ export default function Sidebar({
         <div className="sidebar-logo-icon">
           <NavIcon name="logo" />
         </div>
-
         <div className="sidebar-logo-text">
-          <strong>CivicAdmin</strong>
+          <strong>Administration Civile</strong>
           <span>{t.portal}</span>
         </div>
       </div>

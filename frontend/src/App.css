@@ -540,3 +540,27 @@ body,
   white-space: normal !important;
   letter-spacing: 0.4px !important;
 }
+/* FIX LONG LOGO TITLE */
+.sidebar-logo {
+  overflow: hidden !important;
+}
+
+.sidebar-logo-text {
+  min-width: 0 !important;
+  max-width: 200px !important;
+}
+
+.sidebar-logo-text strong {
+  display: block !important;
+  font-size: 19px !important;
+  line-height: 1.15 !important;
+  white-space: normal !important;
+  word-break: normal !important;
+}
+
+.sidebar-logo-text span {
+  display: block !important;
+  font-size: 12px !important;
+  margin-top: 4px !important;
+  white-space: nowrap !important;
+}
